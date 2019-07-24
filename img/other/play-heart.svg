@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="81px" viewBox="0 0 65 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>heart</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="play" transform="translate(-837.000000, -116.000000)" fill="#83A8BD" fill-rule="nonzero">
+            <path d="M869.96,196.43 L869.04,196.43 C869.04,174.02 866.25,143.89 852.98,127.64 C845.09,117.98 837.11,117.84 837.03,117.84 L837.03,116.92 L901.95,116.92 L901.95,117.84 C870.33,117.84 869.96,195.64 869.96,196.43 Z M841.4,117.84 C844.57,118.96 849.09,121.45 853.63,126.97 C860.23,135 867.94,151.13 869.63,183.13 C870.16,175.79 871.17,166.27 873.12,156.81 C877.68,134.61 885.58,121.31 896.16,117.84 L841.4,117.84 Z" id="heart"></path>
+        </g>
+    </g>
+</svg>

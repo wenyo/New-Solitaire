@@ -1,0 +1,69 @@
+// Basic setting
+.wrap{
+    height: 100vh;
+    font-family: Helvetica, Tahoma, Arial;
+}
+.mainBackground{
+    background-color: $color-master;
+}
+.header,.main{
+    display: flex;
+    justify-content: center;
+}
+.header{
+    background-color: $color-sec;
+}
+
+.content{
+    max-width: 1460px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+// Main setting
+.headerStyle{
+    display: inline-flex;
+    align-items: flex-start;
+    height: 68vh;
+    overflow: hidden;
+    padding: 0;
+}
+.title{
+    margin-top: 10%;
+}
+
+.mainStyle{
+    width: 100%;
+}
+
+.mainStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32vh;
+}
+
+.start{
+    display: flex;
+    align-items: center;
+    text-shadow: 0 2px 2px $color-thir;
+    @include pointer;
+    color: $color-sec;
+    font-size: $fontsize-l;
+    transition: .5s;
+    text-decoration: none;
+    img{
+        margin-left: 10px;
+        height: 30px;
+        width: auto;
+        transition: .5s;
+    }
+
+    &:hover{
+        font-size: $fontsize-xl;
+        &>img{
+            height: 33px;
+        }
+    }
+}

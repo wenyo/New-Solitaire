@@ -1,0 +1,87 @@
+// Play Setting
+//nav
+.playBackground{
+    background-color: $color-four;
+    height: 100vh;
+}
+
+nav{
+    height: 10vh;
+    box-sizing: border-box;
+}
+.playNav{
+    color: $color-five;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-master;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.playTitle img{
+    width: 120px;
+    height: auto;
+}
+.countDown{
+    margin: 0 10px;
+}
+.menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    li{
+        padding: 0 10px;
+        @include pointer;
+    }
+}
+
+//playground
+.playground{
+    height: 90vh;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+.space,
+.card{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.space ul,
+.card ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.space li,
+.card li{
+    width: 100px;
+    height: 167px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 0 15px;
+}
+
+.tempSpace li{
+    border: 1px solid $color-master;
+}
+
+.orderSpace li,
+.card li{
+    border: 1px solid $color-five;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 50%;
+        width: auto;
+    }
+}
