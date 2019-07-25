@@ -1,0 +1,119 @@
+// Alert Setting
+.layer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $color-four;
+    z-index: 0;
+    opacity: .7;
+}
+.alert{
+    position: fixed;
+    top: calc((100vh - 60vh) / 2);//temp
+    left: calc((100vw - 90vw) / 2);
+    height: 60vh;
+    width: 90vw;
+    box-sizing: border-box;
+}
+
+.alertInset{
+    position: relative;
+}
+
+.alertContent{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    background-color: $color-sec;
+    border: 5px solid $color-master;
+    border-radius: 50px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.backBtn{
+    position: absolute;
+    top: -55px;
+    left: 55px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    color: $color-five;
+    font-size: $fontsize-xl;
+    @include pointer;
+    transition: .5s;
+    &:hover{
+        text-shadow: 3px 3px 8px $color-five;
+        color: $color-sec;
+    }
+    img{
+        margin: 0 2px;
+        height: 30px;
+        width: auto;
+    }
+    span{
+        margin: 0 10px;
+    }
+}
+
+.people{
+    display: inline-block;
+    border-radius: 50px;
+    height: 60vh;
+    width: auto;
+}
+
+.note{
+    display: inline-block;
+    width: 50vw;
+    padding: 30px;
+    box-sizing: border-box;
+    color: $color-master;
+}
+.noteTitle{
+    font-size: $fontsize-xxl;
+    margin-bottom: 20px;
+    line-height: 1.2em;
+}
+
+//NEW GAMES
+.newGames{
+    .note{
+        padding: 50px;
+    }
+}
+
+.noteBtn{
+    font-size: $fontsize-xl;
+    margin: 30px 10px;
+    padding-left: 30px;
+    position: relative;
+    @include pointer;
+    line-height: 1.2em;
+    transition: .5s;
+    div{
+        display: inline;
+    }
+    &:hover{
+        text-shadow: 3px 3px 8px $color-master;
+        color: $color-sec;
+    }
+    img{
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+}
+
+//NO MORE MOVES
+.noMoreMove{
+    .note{
+        padding-left: 50px;
+    }
+}

@@ -2,6 +2,8 @@
 .wrap{
     height: 100vh;
     font-family: Helvetica, Tahoma, Arial;
+    font-size: $fontsize-xs;
+    font-weight: lighter;
 }
 .mainBackground{
     background-color: $color-master;
