@@ -16,6 +16,9 @@
        <main>
            <div class="content playground">
 
+                <div class=" layer welcome" v-if = 'bWelcome'>
+                    <img src="./img/other/card-background.png" alt="">
+                </div>
                 <div class="space">
 
                     <ul class="tempSpace">
@@ -49,21 +52,21 @@
                     </ul>
                 </div>
 
-                <div class="layer"></div>
+                <div class="layer alertLayer" v-if = '[1,2,3,4].includes(iAlert)' @click = 'iAlert = 0'></div>
                 
-                <div class="alert">
+                <div class="alert" v-if = '[1,2,3,4].includes(iAlert)'>
 
                     <div class="alertInset">
                         <div class="backBtn">
                             <img src="./img/other/arrow-blue.svg" alt="">
                             <img src="./img/other/arrow-blue.svg" alt="">
                             <img src="./img/other/arrow-blue.svg" alt="">
-                            <!-- <span>BACK</span> -->
-                            <span>Keep Playing</span>
+                            <span v-if = 'iAlert == 1' @click = 'iAlert = 0'>BACK</span>
+                            <span v-if = 'iAlert == 2' @click = 'iAlert = 0'>Keep Playing</span>
                         </div>
                     </div>
                     
-                    <!-- <div class="alertContent rules">
+                    <div class="alertContent rules" v-if = 'iAlert == 1'>
                         <div class="people">
                             <img src="./img/other/people3.svg">
                         </div>
@@ -74,9 +77,9 @@
                                 Freecell is a one-deck solitaire card game. All cards are dealt into 8 tableau piles. Four Cells (in the top left corner of the screen) and four foundation piles (top right hand corner) are placed above the tableau piles. The object of the game is to build up all cards on foundations from Ace to King by following suit. You win when all 52 cards are moved there, 13 to a pile. Top cards of tableau piles and cards from Cells are available to play. You can build tableau piles down by alternating color. Only one card at a time can be moved. The top card of any tableau pile can also be moved to any Cell. Each Cell (or Reserve space) may contain only one card. Cards in the cells can be moved to the foundation piles or back to the tableau piles, if possible. The rules state that you can move only one card at a time, but you can move group of cards in the proper sequence if you have enough free (empty) Cells and/or tableau piles.
                             </p>
                         </div>
-                    </div> -->
+                    </div>
 
-                    <!-- <div class="alertContent newGames">
+                    <div class="alertContent newGames" v-if = 'iAlert == 2'>
                         <div class="note">
                             <div class="noteBtn">
                                 <img src="./img/other/arrow-orange.svg" alt="">                                
@@ -91,9 +94,9 @@
                         <div class="people">
                             <img src="./img/other/people4.svg">
                         </div>
-                    </div> -->
+                    </div>
 
-                    <!-- <div class="alertContent noMoreMove">
+                    <div class="alertContent noMoreMove" v-if = 'iAlert == 3'>
                         <div class="people">
                             <img src="./img/other/people2.svg">
                         </div>
@@ -114,9 +117,9 @@
                                     <div>Undo</div>
                                 </div>
                         </div>
-                    </div> -->
+                    </div>
                     
-                    <div class="alertContent congratulation">
+                    <div class="alertContent congratulation" v-if = 'iAlert == 4'>
                         <div class="note">
                             <div class="noteTitle">CONGRATULATIONS !</br>YOU WIN THE GAME !</div>
                             <div class="noteBtn">
@@ -152,8 +155,8 @@
                     </div>
                     
                     <ul class='menu'>
-                        <li>RULES</li>
-                        <li>NEW GAMES</li>
+                        <li @click = 'iAlert = 1'>RULES</li>
+                        <li @click = 'iAlert = 2'>NEW GAMES</li>
                         <li>UNDO</li>
                         <li>HINT</li>
                     </ul>

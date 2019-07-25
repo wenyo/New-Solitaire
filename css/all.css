@@ -155,6 +155,26 @@ img {
   height: 33px;
 }
 
+.layer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: #243037;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+
+.noneShow {
+  opacity: 0;
+}
+
+.noneDisplay {
+  display: 0;
+}
+
 .playBackground {
   background-color: #243037;
   height: 100vh;
@@ -217,6 +237,12 @@ nav {
 .menu li {
   padding: 0 10px;
   cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu li:hover {
+  text-shadow: 0 0 5px #9dbfd3;
 }
 
 .playground {
@@ -281,14 +307,7 @@ nav {
   width: auto;
 }
 
-.layer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #243037;
-  z-index: 0;
+.alertLayer {
   opacity: .7;
 }
 

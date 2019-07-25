@@ -1,4 +1,22 @@
 // Play Setting
+.layer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: $color-four;
+    transition: 1.2s;
+}
+
+.noneShow{
+    opacity: 0;
+}
+
+.noneDisplay{
+    display: 0;
+}
 //nav
 .playBackground{
     background-color: $color-four;
@@ -39,6 +57,10 @@ nav{
     li{
         padding: 0 10px;
         @include pointer;
+        transition: .5s;
+        &:hover{
+            text-shadow: 0 0 5px $color-six;
+        }
     }
 }
 

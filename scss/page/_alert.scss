@@ -1,12 +1,5 @@
 // Alert Setting
-.layer{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: $color-four;
-    z-index: 0;
+.alertLayer{
     opacity: .7;
 }
 .alert{
