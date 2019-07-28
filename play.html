@@ -16,7 +16,7 @@
        <main>
            <div class="content playground">
 
-                <div class=" layer welcome" v-if = 'bWelcome'>
+                <div class=" layer welcome" v-if = 'bWelcome' ref='welcome'>
                     <img src="./img/other/card-background.png" alt="">
                 </div>
                 <div class="space">
@@ -38,17 +38,19 @@
                 </div>
 
                 <div class="card">
-                    <ul class="sevenCard">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="sevenCard" ref="cardUl">
+                        <li :id="column" v-for= '(cards, column) in below' v-if="['b0','b1','b2','b3'].includes(column)" :ref='column'>
+                            <div class="imgBox" ref='imgBox'>
+                                <img v-for = '(card, index) in cards' :src="card.url" :ref='card.cardRef' @mousedown="mouseInfo">
+                            </div>
+                        </li>
                     </ul>
                     <ul class="sixCard">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li :id="column" v-for= '(cards, column) in below' v-if="['b4','b5','b6','b7'].includes(column)" :ref='column'>
+                            <div class="imgBox" ref='imgBox'>
+                                <img v-for = '(card, index) in cards' :src="card.url" :ref='card.cardRef'>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
@@ -145,9 +147,9 @@
             <div class="content">
                 <div class="playNav">
                     <div class="info">
-                        <span class="playTitle">
+                        <a href="index.html" class="playTitle">
                             <img src="./img/other/main_word1.png" alt="New Solitaire">
-                        </span>
+                        </a>
                         <div class="countDown">
                             <sapn class="timeTitle">TIME</sapn>
                             <span>9:00</span>
